@@ -16,32 +16,51 @@ export default function ProcessSection() {
     const container = containerRef.current;
     if (!wrapper || !container) return;
 
-    const tween = gsap.to(container, {
-      x: () => -(container.scrollWidth - window.innerWidth),
-      ease: "none",
-      scrollTrigger: {
-        trigger: wrapper,
-        pin: true,
-        scrub: 1,
-        end: () => "+=" + (container.scrollWidth - window.innerWidth)
+    let tween: gsap.core.Tween | undefined;
+
+    const initScroll = () => {
+      if (window.innerWidth >= 768) {
+        tween = gsap.to(container, {
+          x: () => -(container.scrollWidth - window.innerWidth),
+          ease: "none",
+          scrollTrigger: {
+            trigger: wrapper,
+            pin: true,
+            scrub: 1,
+            end: () => "+=" + (container.scrollWidth - window.innerWidth),
+            invalidateOnRefresh: true,
+          }
+        });
       }
-    });
+    };
+
+    initScroll();
+
+    const handleResize = () => {
+      ScrollTrigger.getAll().forEach(t => t.kill());
+      if (tween) tween.kill();
+      gsap.set(container, { clearProps: "all" });
+      initScroll();
+    };
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      tween.kill();
+      window.removeEventListener('resize', handleResize);
+      if (tween) tween.kill();
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
 
   return (
-    <section id="process" ref={wrapperRef} className="process-wrapper overflow-hidden bg-[#030303] h-screen relative border-b border-neutral-900/50">
-      <div ref={containerRef} className="process-container flex h-full w-[400vw]">
+    <section id="process" ref={wrapperRef} className="process-wrapper overflow-hidden bg-[#030303] md:h-screen relative border-b border-neutral-900/50">
+      <div ref={containerRef} className="process-container flex flex-col md:flex-row h-auto md:h-full w-full md:w-[400vw]">
         {/* Panel 1 - Discovery */}
-        <div className="w-screen h-full grid grid-cols-1 lg:grid-cols-2 border-r border-neutral-800/50 relative bg-[#030303]">
-          <div className="flex flex-col justify-center px-12 md:px-24 relative z-10 pointer-events-none">
-            <div className="absolute top-12 left-12 text-xs mono-font text-indigo-500 mb-2">PHASE_01</div>
-            <h3 className="text-6xl md:text-8xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-600 mb-8 heading-font">Discovery</h3>
-            <p className="text-xl md:text-2xl text-neutral-400 max-w-xl font-light leading-relaxed">
+        <div className="w-full md:w-screen min-h-[70vh] md:h-full grid grid-cols-1 lg:grid-cols-2 border-b md:border-b-0 md:border-r border-neutral-800/50 relative bg-[#030303]">
+          <div className="flex flex-col justify-center px-6 md:px-24 py-20 md:py-0 relative z-10 pointer-events-none">
+            <div className="absolute top-8 left-6 md:top-12 md:left-12 text-xs mono-font text-indigo-500 mb-2">PHASE_01</div>
+            <h3 className="text-5xl md:text-8xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-600 mb-6 md:mb-8 heading-font">Discovery</h3>
+            <p className="text-lg md:text-2xl text-neutral-400 max-w-xl font-light leading-relaxed">
               Deep dive into business logic. Understanding goals, target audience, and defining technical constraints.
             </p>
           </div>
@@ -58,11 +77,11 @@ export default function ProcessSection() {
         </div>
 
         {/* Panel 2 - Architecture */}
-        <div className="w-screen h-full grid grid-cols-1 lg:grid-cols-2 border-r border-neutral-800/50 relative bg-[#030303]">
-          <div className="flex flex-col justify-center px-12 md:px-24 relative z-10 pointer-events-none">
-            <div className="absolute top-12 left-12 text-xs mono-font text-cyan-500 mb-2">PHASE_02</div>
-            <h3 className="text-6xl md:text-8xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-600 mb-8 heading-font">Architecture</h3>
-            <p className="text-xl md:text-2xl text-neutral-400 max-w-xl font-light leading-relaxed">
+        <div className="w-full md:w-screen min-h-[70vh] md:h-full grid grid-cols-1 lg:grid-cols-2 border-b md:border-b-0 md:border-r border-neutral-800/50 relative bg-[#030303]">
+          <div className="flex flex-col justify-center px-6 md:px-24 py-20 md:py-0 relative z-10 pointer-events-none">
+            <div className="absolute top-8 left-6 md:top-12 md:left-12 text-xs mono-font text-cyan-500 mb-2">PHASE_02</div>
+            <h3 className="text-5xl md:text-8xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-600 mb-6 md:mb-8 heading-font">Architecture</h3>
+            <p className="text-lg md:text-2xl text-neutral-400 max-w-xl font-light leading-relaxed">
               Blueprinting the system. Designing scalable schemas, API contracts, and choosing the right stack.
             </p>
           </div>
@@ -78,11 +97,11 @@ export default function ProcessSection() {
         </div>
 
         {/* Panel 3 - Development */}
-        <div className="w-screen h-full grid grid-cols-1 lg:grid-cols-2 border-r border-neutral-800/50 relative bg-[#030303]">
-          <div className="flex flex-col justify-center px-12 md:px-24 relative z-10 pointer-events-none">
-            <div className="absolute top-12 left-12 text-xs mono-font text-purple-500 mb-2">PHASE_03</div>
-            <h3 className="text-6xl md:text-8xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-600 mb-8 heading-font">Development</h3>
-            <p className="text-xl md:text-2xl text-neutral-400 max-w-xl font-light leading-relaxed">
+        <div className="w-full md:w-screen min-h-[70vh] md:h-full grid grid-cols-1 lg:grid-cols-2 border-b md:border-b-0 md:border-r border-neutral-800/50 relative bg-[#030303]">
+          <div className="flex flex-col justify-center px-6 md:px-24 py-20 md:py-0 relative z-10 pointer-events-none">
+            <div className="absolute top-8 left-6 md:top-12 md:left-12 text-xs mono-font text-purple-500 mb-2">PHASE_03</div>
+            <h3 className="text-5xl md:text-8xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-600 mb-6 md:mb-8 heading-font">Development</h3>
+            <p className="text-lg md:text-2xl text-neutral-400 max-w-xl font-light leading-relaxed">
               Rigorous coding sprints. Continuous integration, automated testing, and pixel-perfect implementation.
             </p>
           </div>
@@ -110,14 +129,14 @@ export default function ProcessSection() {
         </div>
 
         {/* Panel 4 - Ready CTA */}
-        <div className="w-screen h-full flex items-center justify-center relative bg-white text-black">
+        <div className="w-full md:w-screen min-h-[50vh] md:h-full flex items-center justify-center relative bg-white text-black py-20 md:py-0">
           <div className="text-center relative z-10">
-            <h3 className="text-8xl md:text-[10rem] font-semibold tracking-tighter mb-10 heading-font">
+            <h3 className="text-6xl md:text-[10rem] font-semibold tracking-tighter mb-8 md:mb-10 heading-font">
               Ready?
             </h3>
             <Link 
-              href="#contact" 
-              className="px-10 py-5 bg-black text-white rounded-full text-sm mono-font uppercase tracking-widest hover:scale-105 transition-transform hover-trigger inline-block hover:shadow-2xl hover:shadow-black/20"
+              href="mailto:oyu.intelligence@icloud.com" 
+              className="px-8 md:px-10 py-4 md:py-5 bg-black text-white rounded-full text-xs md:text-sm mono-font uppercase tracking-widest hover:scale-105 transition-transform hover-trigger inline-block hover:shadow-2xl hover:shadow-black/20"
             >
               Initialize Project
             </Link>

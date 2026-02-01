@@ -26,14 +26,14 @@ const works = [
 
 export default function WorkSection() {
   return (
-    <section id="work" className="py-32 px-6 md:px-12 bg-[#030303] border-t border-neutral-900/50">
+    <section id="work" className="py-20 md:py-32 px-6 md:px-12 bg-[#030303] border-t border-neutral-900/50">
       <div className="max-w-7xl mx-auto mb-24">
         <h2 className="text-4xl md:text-5xl font-medium heading-font tracking-tight text-white">
           Selected Output
         </h2>
       </div>
 
-      <div className="max-w-5xl mx-auto relative space-y-64 pb-64">
+      <div className="max-w-5xl mx-auto relative space-y-24 md:space-y-64 pb-24 md:pb-64">
         {works.map((work, index) => (
           <div 
             key={index} 

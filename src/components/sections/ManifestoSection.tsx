@@ -13,42 +13,54 @@ export default function ManifestoSection() {
     const manifesto = manifestoRef.current;
     if (!manifesto) return;
 
-    const text = manifesto.innerText;
-    manifesto.innerHTML = "";
-    
-    text.split(" ").forEach(word => {
-      const span = document.createElement("span");
-      span.innerText = word + " ";
-      span.style.opacity = "0.1";
-      span.style.transition = "opacity 0.3s ease";
-      manifesto.appendChild(span);
-    });
+    // Save original text if not already processed
+    if (!manifesto.dataset.processed) {
+      const text = manifesto.innerText;
+      manifesto.innerHTML = "";
+      manifesto.dataset.processed = "true";
+      
+      text.split(" ").forEach(word => {
+        const span = document.createElement("span");
+        span.innerText = word + " ";
+        span.style.opacity = "0.2";
+        span.style.filter = "blur(8px)";
+        span.style.display = "inline-block";
+        span.style.willChange = "transform, opacity, filter";
+        span.style.transform = "translateY(10px)";
+        manifesto.appendChild(span);
+      });
+    }
 
     const spans = manifesto.querySelectorAll("span");
-    gsap.to(spans, {
-      opacity: 1,
-      color: "#ffffff",
-      stagger: 0.05,
-      scrollTrigger: {
-        trigger: "#manifesto",
-        start: "top 80%",
-        end: "bottom 50%",
-        scrub: 1
-      }
+    
+    const ctx = gsap.context(() => {
+        gsap.to(spans, {
+            opacity: 1,
+            filter: "blur(0px)",
+            y: 0,
+            color: "#ffffff",
+            stagger: 0.05,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: manifesto,
+                start: "top 85%",
+                end: "bottom 45%",
+                scrub: 1,
+            }
+        });
     });
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
+    return () => ctx.revert();
   }, []);
 
   return (
-    <section className="py-40 px-6 bg-[#030303] flex items-center justify-center border-t border-b border-neutral-900/50">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="py-40 px-6 bg-[#030303] flex items-center justify-center border-t border-b border-neutral-900/50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-indigo-900/5 blur-[100px] pointer-events-none"></div>
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <p 
-          id="manifesto" 
           ref={manifestoRef}
-          className="text-4xl md:text-6xl font-medium leading-[1.15] tracking-tight heading-font text-neutral-300"
+          className="text-4xl md:text-6xl font-medium leading-[1.2] tracking-tight heading-font text-neutral-600"
         >
           We don&apos;t just build systems. We architect intelligence that scales, automate frameworks that save time, and build interfaces that users actually enjoy. In a world of digital noise, innovation is our currency.
         </p>
