@@ -3,10 +3,12 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function ZoomMaskSection() {
   const wrapperRef = useRef<HTMLElement>(null);
   const circleRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -43,7 +45,7 @@ export default function ZoomMaskSection() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-            <h3 className="text-white text-5xl md:text-7xl heading-font font-medium tracking-tight">Let&apos;s Build</h3>
+            <h3 className="text-white text-5xl md:text-7xl heading-font font-medium tracking-tight">{t('zoomMask.title')}</h3>
           </div>
         </div>
       </div>

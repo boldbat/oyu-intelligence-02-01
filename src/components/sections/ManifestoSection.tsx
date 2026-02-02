@@ -3,9 +3,12 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function ManifestoSection() {
   const manifestoRef = useRef<HTMLParagraphElement>(null);
+  const { t, locale } = useLanguage();
+  const processedLocaleRef = useRef<string | null>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -13,11 +16,11 @@ export default function ManifestoSection() {
     const manifesto = manifestoRef.current;
     if (!manifesto) return;
 
-    // Save original text if not already processed
-    if (!manifesto.dataset.processed) {
-      const text = manifesto.innerText;
+    // Re-process when locale changes
+    if (processedLocaleRef.current !== locale) {
+      const text = t('manifesto.text');
       manifesto.innerHTML = "";
-      manifesto.dataset.processed = "true";
+      processedLocaleRef.current = locale;
       
       text.split(" ").forEach(word => {
         const span = document.createElement("span");
@@ -52,7 +55,7 @@ export default function ManifestoSection() {
     });
 
     return () => ctx.revert();
-  }, []);
+  }, [locale, t]);
 
   return (
     <section className="py-40 px-6 bg-[#030303] flex items-center justify-center border-t border-b border-neutral-900/50 relative overflow-hidden">
@@ -62,7 +65,7 @@ export default function ManifestoSection() {
           ref={manifestoRef}
           className="text-4xl md:text-6xl font-medium leading-[1.2] tracking-tight heading-font text-neutral-600"
         >
-          We don&apos;t just build systems. We architect intelligence that scales, automate frameworks that save time, and build interfaces that users actually enjoy. In a world of digital noise, innovation is our currency.
+          {t('manifesto.text')}
         </p>
       </div>
     </section>

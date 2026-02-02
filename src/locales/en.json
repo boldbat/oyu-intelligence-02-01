@@ -1,0 +1,175 @@
+{
+  "navigation": {
+    "services": "Services",
+    "solutions": "Solutions",
+    "work": "Work",
+    "process": "Process",
+    "systemVersion": "System v1.0"
+  },
+  "hero": {
+    "badge": "Innovating the Future of AI",
+    "heading": {
+      "line1": "Digital",
+      "line2": "Solutions",
+      "line3": "& AI Agents"
+    },
+    "description": "Delivering innovative, high-quality digital solutions to help businesses grow. We combine <span class=\"text-indigo-400\">technical excellence</span> with <span class=\"text-cyan-400\">creative innovation</span>.",
+    "cta": "Discover Solutions"
+  },
+  "services": {
+    "title": "Core Modules",
+    "subtitle": "[ 01 - 06 ]",
+    "items": {
+      "automation": {
+        "title": "AI Automation",
+        "description": "Automating repetitive tasks, analyzing data, and making intelligent decisions with AI models."
+      },
+      "mobile": {
+        "title": "Mobile Apps",
+        "description": "Developing beautiful, high-performance iOS and Android applications with Flutter & React Native."
+      },
+      "web": {
+        "title": "Web Design",
+        "description": "Modern, responsive websites that perfectly represent your brand identity."
+      },
+      "content": {
+        "title": "AI Content & Automation",
+        "description": "Generative AI for video, image, & game assets. Intelligent chatbots & n8n workflow automation."
+      },
+      "saas": {
+        "title": "SaaS Products",
+        "description": "Developing B2B/B2C platforms like Oyu AI, Astro AI, and LookLuxe AI."
+      },
+      "data": {
+        "title": "Data Intelligence",
+        "description": "Helping businesses understand data patterns and trends with AI algorithms."
+      }
+    }
+  },
+  "metrics": {
+    "uptime": "Uptime",
+    "latency": "Latency",
+    "commits": "Commits",
+    "requests": "Requests",
+    "units": {
+      "ms": "MS",
+      "week": "Wk",
+      "perSecond": "/s"
+    }
+  },
+  "manifesto": {
+    "text": "We don't just build systems. We architect intelligence that scales, automate frameworks that save time, and build interfaces that users actually enjoy. In a world of digital noise, innovation is our currency."
+  },
+  "marquee": {
+    "items": {
+      "nextjs": "Next.js",
+      "react": "React",
+      "nodejs": "Node.js",
+      "python": "Python",
+      "typescript": "TypeScript",
+      "postgresql": "PostgreSQL",
+      "docker": "Docker"
+    }
+  },
+  "capabilities": {
+    "title": "System Capabilities",
+    "subtitle": "Infrastructure grade solutions.",
+    "items": {
+      "multiAgent": {
+        "title": "Multi-Agent Architecture",
+        "description": "Our A2A (Agent-to-Agent) communication frameworks allow specialized AI agents to collaborate, solving complex business problems faster than single-model systems."
+      },
+      "security": {
+        "title": "Enterprise Security",
+        "description": "Implemented via <span class=\"text-emerald-400\">Private RAG</span>, ensuring your data never leaves your secure infrastructure while learning from it."
+      },
+      "crossPlatform": {
+        "title": "Cross Platform"
+      },
+      "globalEdge": {
+        "title": "Global Edge"
+      }
+    }
+  },
+  "process": {
+    "phases": {
+      "discovery": {
+        "phase": "PHASE_01",
+        "title": "Discovery",
+        "description": "Deep dive into business logic. Understanding goals, target audience, and defining technical constraints."
+      },
+      "architecture": {
+        "phase": "PHASE_02",
+        "title": "Architecture",
+        "description": "Blueprinting the system. Designing scalable schemas, API contracts, and choosing the right stack."
+      },
+      "development": {
+        "phase": "PHASE_03",
+        "title": "Development",
+        "description": "Rigorous coding sprints. Continuous integration, automated testing, and pixel-perfect implementation."
+      }
+    },
+    "cta": {
+      "title": "Ready?",
+      "button": "Initialize Project"
+    }
+  },
+  "work": {
+    "title": "Selected Output",
+    "items": {
+      "oyuAi": "Oyu AI",
+      "oyuAiTags": ["AI AGENT", "SAAS", "B2B"],
+      "astroAi": "Astro AI",
+      "astroAiTags": ["MOBILE", "LLM", "CHATBOT"],
+      "lookLuxeAi": "LookLuxe AI",
+      "lookLuxeAiTags": ["VISION", "STYLE", "MOBILE"]
+    }
+  },
+  "terminal": {
+    "header": "oyu-intelligence — -zsh",
+    "command": "./initialize_intelligence.sh --production",
+    "loadingSwarm": "Loading Agent Swarm...",
+    "loading": "Loading",
+    "neuralCore": "Neural Core v2.4",
+    "multiAgentGrid": "Multi-Agent Grid",
+    "knowledgeBase": "Knowledge Base",
+    "connectingRAG": "Connecting to Private RAG cluster...",
+    "connected": "Connected",
+    "optimizingNeural": "Optimizing neural pathways...",
+    "done": "Done (0.42s)",
+    "systemReady": "System ready for deployment."
+  },
+  "references": {
+    "title": "References",
+    "subtitle": "[ Trusted By ]",
+    "items": {
+      "wangOk": "Wang OK",
+      "wangOkRole": "Singer, 88rising",
+      "wangOkQuote": "\"Exceeded our expectations.\"",
+      "ahmetYurdakul": "Ahmet YURDAKUL",
+      "ahmetYurdakulRole": "Data Scientist, HubX",
+      "ahmetYurdakulQuote": "\"A game-changer.\"",
+      "davidWilson": "David Wilson",
+      "davidWilsonRole": "Founder, StartUp Ventures",
+      "davidWilsonQuote": "\"True technology partner.\""
+    }
+  },
+  "zoomMask": {
+    "title": "Let's Build"
+  },
+  "footer": {
+    "companyName": "OYU INTELLIGENCE",
+    "copyright": "© 2024 OYU INTELLIGENCE LLC",
+    "systemStatus": "SYSTEMS OPERATIONAL",
+    "twitter": "TWITTER",
+    "linkedin": "LINKEDIN",
+    "instagram": "INSTAGRAM"
+  },
+  "common": {
+    "email": "oyu.intelligence@icloud.com"
+  },
+  "languageSelector": {
+    "title": "Select Language",
+    "subtitle": "Choose your preferred language"
+  }
+}

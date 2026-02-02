@@ -2,34 +2,36 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-
-const references = [
-  {
-    name: 'Wang OK',
-    role: 'Singer, 88rising',
-    quote: '"Exceeded our expectations."',
-    quoteColor: 'text-indigo-500/50 group-hover:text-indigo-400',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop',
-  },
-  {
-    name: 'Ahmet YURDAKUL',
-    role: 'Data Scientist, HubX',
-    quote: '"A game-changer."',
-    quoteColor: 'text-cyan-500/50 group-hover:text-cyan-400',
-    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1000&auto=format&fit=crop',
-  },
-  {
-    name: 'David Wilson',
-    role: 'Founder, StartUp Ventures',
-    quote: '"True technology partner."',
-    quoteColor: 'text-emerald-500/50 group-hover:text-emerald-400',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop',
-  },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function ReferencesSection() {
+  const { t } = useLanguage();
   const trailWrapperRef = useRef<HTMLDivElement>(null);
   const trailImgRef = useRef<HTMLImageElement>(null);
+
+  const references = [
+    {
+      nameKey: 'wangOk',
+      roleKey: 'wangOkRole',
+      quoteKey: 'wangOkQuote',
+      quoteColor: 'text-indigo-500/50 group-hover:text-indigo-400',
+      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop',
+    },
+    {
+      nameKey: 'ahmetYurdakul',
+      roleKey: 'ahmetYurdakulRole',
+      quoteKey: 'ahmetYurdakulQuote',
+      quoteColor: 'text-cyan-500/50 group-hover:text-cyan-400',
+      image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1000&auto=format&fit=crop',
+    },
+    {
+      nameKey: 'davidWilson',
+      roleKey: 'davidWilsonRole',
+      quoteKey: 'davidWilsonQuote',
+      quoteColor: 'text-emerald-500/50 group-hover:text-emerald-400',
+      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop',
+    },
+  ];
 
   useEffect(() => {
     const trailWrapper = trailWrapperRef.current;
@@ -68,10 +70,10 @@ export default function ReferencesSection() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between mb-20 items-end">
             <h2 className="text-4xl md:text-5xl font-medium heading-font tracking-tight text-white">
-              References
+              {t('references.title')}
             </h2>
             <p className="text-sm mono-font text-neutral-500 uppercase mt-4 md:mt-0">
-              [ Trusted By ]
+              {t('references.subtitle')}
             </p>
           </div>
 
@@ -84,10 +86,10 @@ export default function ReferencesSection() {
                 onMouseLeave={handleMouseLeave}
               >
                 <h3 className="text-4xl md:text-6xl font-medium text-neutral-500 group-hover:text-white transition-colors heading-font">
-                  {ref.name}
+                  {t(`references.items.${ref.nameKey}`)}
                 </h3>
                 <span className="text-xs mono-font uppercase text-neutral-600 group-hover:text-neutral-400 text-right">
-                  {ref.role}<br /><span className={ref.quoteColor}>{ref.quote}</span>
+                  {t(`references.items.${ref.roleKey}`)}<br /><span className={ref.quoteColor}>{t(`references.items.${ref.quoteKey}`)}</span>
                 </span>
               </div>
             ))}

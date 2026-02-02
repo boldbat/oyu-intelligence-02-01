@@ -1,0 +1,175 @@
+{
+  "navigation": {
+    "services": "Үйлчилгээ",
+    "solutions": "Шийдэл",
+    "work": "Бүтээлүүд",
+    "process": "Үйл явц",
+    "systemVersion": "Систем v1.0"
+  },
+  "hero": {
+    "badge": "AI-н ирээдүйг инноваци хийж байна",
+    "heading": {
+      "line1": "Дижитал",
+      "line2": "Шийдэл",
+      "line3": "& AI Агентууд"
+    },
+    "description": "Бизнесийг өсөхөд нь туслах инновацлаг, өндөр чанартай дижитал шийдлүүдийг хүргэж байна. Бид <span class=\"text-indigo-400\">техникийн шилдэг байдал</span>-ыг <span class=\"text-cyan-400\">бүтээлч инновацитай</span> хослуулдаг.",
+    "cta": "Шийдлүүдийг нээх"
+  },
+  "services": {
+    "title": "Үндсэн Модулиуд",
+    "subtitle": "[ 01 - 06 ]",
+    "items": {
+      "automation": {
+        "title": "AI Автоматжуулалт",
+        "description": "AI загваруудаар давтагдах ажлуудыг автоматжуулах, өгөгдөл шинжлэх, ухаалаг шийдвэр гаргах."
+      },
+      "mobile": {
+        "title": "Мобайл Апп",
+        "description": "Flutter & React Native ашиглан үзэсгэлэнтэй, өндөр гүйцэтгэлтэй iOS болон Android аппликейшнүүдийг хөгжүүлэх."
+      },
+      "web": {
+        "title": "Веб Дизайн",
+        "description": "Таны брэндийг төгс төлөөлөх орчин үеийн, хариу үйлдэлтэй вебсайтууд."
+      },
+      "content": {
+        "title": "AI Контент & Автоматжуулалт",
+        "description": "Видео, зураг, тоглоомын хөрөнгийн үүсгэгч AI. Ухаалаг чатботууд & n8n ажлын урсгалын автоматжуулалт."
+      },
+      "saas": {
+        "title": "SaaS Бүтээгдэхүүн",
+        "description": "Oyu AI, Astro AI, LookLuxe AI зэрэг B2B/B2C платформуудыг хөгжүүлэх."
+      },
+      "data": {
+        "title": "Дата Интеллект",
+        "description": "AI алгоритмуудаар бизнесүүдэд өгөгдлийн хэв маяг, чиг хандлагыг ойлгоход туслах."
+      }
+    }
+  },
+  "metrics": {
+    "uptime": "Ажиллах хугацаа",
+    "latency": "Хоцрогдол",
+    "commits": "Коммитууд",
+    "requests": "Хүсэлтүүд",
+    "units": {
+      "ms": "МС",
+      "week": "7х",
+      "perSecond": "/с"
+    }
+  },
+  "manifesto": {
+    "text": "Бид зөвхөн систем бүтээдэггүй. Бид өргөжих боломжтой оюун ухааны архитектур зохиодог, цаг хэмнэх автоматжуулалтын фреймворк бүтээдэг, хэрэглэгчдэд үнэхээр таалагдах интерфэйс бүтээдэг. Дижитал шуугианы ертөнцөд инноваци бол бидний мөнгөн тэмдэгт."
+  },
+  "marquee": {
+    "items": {
+      "nextjs": "Next.js",
+      "react": "React",
+      "nodejs": "Node.js",
+      "python": "Python",
+      "typescript": "TypeScript",
+      "postgresql": "PostgreSQL",
+      "docker": "Docker"
+    }
+  },
+  "capabilities": {
+    "title": "Системийн Чадамжууд",
+    "subtitle": "Дэд бүтцийн түвшний шийдлүүд.",
+    "items": {
+      "multiAgent": {
+        "title": "Олон-Агент Архитектур",
+        "description": "Бидний A2A (Агент-аас-Агентад) харилцааны фреймворкууд нь мэргэшсэн AI агентуудыг хамтран ажиллах боломжийг олгодог, нэг загварт системээс хурдан бизнесийн нарийн төвөгтэй асуудлуудыг шийддэг."
+      },
+      "security": {
+        "title": "Аж Ахуйн Нэгжийн Аюулгүй Байдал",
+        "description": "<span class=\"text-emerald-400\">Хувийн RAG</span>-аар хэрэгжүүлсэн, таны өгөгдлийг аюулгүй дэд бүтцээс гарахгүйгээр сурах боломжийг олгодог."
+      },
+      "crossPlatform": {
+        "title": "Хөндлөн Платформ"
+      },
+      "globalEdge": {
+        "title": "Глобал Edge"
+      }
+    }
+  },
+  "process": {
+    "phases": {
+      "discovery": {
+        "phase": "ҮЕ_01",
+        "title": "Нээлт",
+        "description": "Бизнесийн логикт гүнзгий шумбах. Зорилго, зорилтот үзэгчдийг ойлгох, техникийн хязгаарлалтыг тодорхойлох."
+      },
+      "architecture": {
+        "phase": "ҮЕ_02",
+        "title": "Архитектур",
+        "description": "Системийн төлөвлөгөө. Өргөжих боломжтой схемүүд, API гэрээнүүдийг дизайнлах, зөв технологийн стекийг сонгох."
+      },
+      "development": {
+        "phase": "ҮЕ_03",
+        "title": "Хөгжүүлэлт",
+        "description": "Хатуу кодчилолын спринтүүд. Тасралтгүй интеграци, автоматжуулсан тестчилэл, пиксел төгс хэрэгжүүлэлт."
+      }
+    },
+    "cta": {
+      "title": "Бэлэн үү?",
+      "button": "Төсөл эхлүүлэх"
+    }
+  },
+  "work": {
+    "title": "Сонгосон Бүтээлүүд",
+    "items": {
+      "oyuAi": "Oyu AI",
+      "oyuAiTags": ["AI АГЕНТ", "SAAS", "B2B"],
+      "astroAi": "Astro AI",
+      "astroAiTags": ["МОБАЙЛ", "LLM", "ЧАТБОТ"],
+      "lookLuxeAi": "LookLuxe AI",
+      "lookLuxeAiTags": ["ВИЗУАЛ", "СТИЛЬ", "МОБАЙЛ"]
+    }
+  },
+  "terminal": {
+    "header": "oyu-intelligence — -zsh",
+    "command": "./initialize_intelligence.sh --production",
+    "loadingSwarm": "Агент Бөөгнөрөл ачааллаж байна...",
+    "loading": "Ачааллаж байна",
+    "neuralCore": "Нейрон Цөм v2.4",
+    "multiAgentGrid": "Олон-Агент Сүлжээ",
+    "knowledgeBase": "Мэдлэгийн Сан",
+    "connectingRAG": "Хувийн RAG кластерт холбогдож байна...",
+    "connected": "Холбогдсон",
+    "optimizingNeural": "Нейрон замуудыг оновчлож байна...",
+    "done": "Дууссан (0.42с)",
+    "systemReady": "Систем байршуулахад бэлэн."
+  },
+  "references": {
+    "title": "Лавлагаанууд",
+    "subtitle": "[ Итгэсэн ]",
+    "items": {
+      "wangOk": "Wang OK",
+      "wangOkRole": "Дуучин, 88rising",
+      "wangOkQuote": "\"Бидний хүлээлтээс давсан.\"",
+      "ahmetYurdakul": "Ahmet YURDAKUL",
+      "ahmetYurdakulRole": "Дата Эрдэмтэн, HubX",
+      "ahmetYurdakulQuote": "\"Тоглоомын өөрчлөгч.\"",
+      "davidWilson": "David Wilson",
+      "davidWilsonRole": "Үүсгэн байгуулагч, StartUp Ventures",
+      "davidWilsonQuote": "\"Жинхэнэ технологийн түнш.\""
+    }
+  },
+  "zoomMask": {
+    "title": "Бүтээцгээе"
+  },
+  "footer": {
+    "companyName": "ОЮУ ИНТЕЛЛИЖЕНС",
+    "copyright": "© 2024 ОЮУ ИНТЕЛЛИЖЕНС ХХК",
+    "systemStatus": "СИСТЕМҮҮД АЖИЛЛАЖ БАЙНА",
+    "twitter": "ТВИТТЕР",
+    "linkedin": "ЛИНКЕДИН",
+    "instagram": "ИНСТАГРАМ"
+  },
+  "common": {
+    "email": "oyu.intelligence@icloud.com"
+  },
+  "languageSelector": {
+    "title": "Хэл сонгох",
+    "subtitle": "Хүссэн хэлээ сонгоно уу"
+  }
+}

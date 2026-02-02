@@ -1,0 +1,175 @@
+{
+  "navigation": {
+    "services": "サービス",
+    "solutions": "ソリューション",
+    "work": "実績",
+    "process": "プロセス",
+    "systemVersion": "システム v1.0"
+  },
+  "hero": {
+    "badge": "AIの未来を革新する",
+    "heading": {
+      "line1": "デジタル",
+      "line2": "ソリューション",
+      "line3": "& AIエージェント"
+    },
+    "description": "ビジネスの成長を支援する革新的で高品質なデジタルソリューションを提供します。私たちは<span class=\"text-indigo-400\">技術的卓越性</span>と<span class=\"text-cyan-400\">創造的イノベーション</span>を組み合わせます。",
+    "cta": "ソリューションを発見"
+  },
+  "services": {
+    "title": "コアモジュール",
+    "subtitle": "[ 01 - 06 ]",
+    "items": {
+      "automation": {
+        "title": "AI自動化",
+        "description": "AIモデルによる反復タスクの自動化、データ分析、インテリジェントな意思決定。"
+      },
+      "mobile": {
+        "title": "モバイルアプリ",
+        "description": "Flutter & React Nativeを使用した、美しく高性能なiOS・Androidアプリケーションの開発。"
+      },
+      "web": {
+        "title": "Webデザイン",
+        "description": "ブランドアイデンティティを完璧に表現する、モダンでレスポンシブなウェブサイト。"
+      },
+      "content": {
+        "title": "AIコンテンツ & 自動化",
+        "description": "動画、画像、ゲームアセット向けの生成AI。インテリジェントなチャットボットとn8nワークフロー自動化。"
+      },
+      "saas": {
+        "title": "SaaS製品",
+        "description": "Oyu AI、Astro AI、LookLuxe AIなどのB2B/B2Cプラットフォームの開発。"
+      },
+      "data": {
+        "title": "データインテリジェンス",
+        "description": "AIアルゴリズムでビジネスがデータパターンとトレンドを理解するのを支援。"
+      }
+    }
+  },
+  "metrics": {
+    "uptime": "稼働時間",
+    "latency": "レイテンシ",
+    "commits": "コミット",
+    "requests": "リクエスト",
+    "units": {
+      "ms": "ミリ秒",
+      "week": "週",
+      "perSecond": "/秒"
+    }
+  },
+  "manifesto": {
+    "text": "私たちは単にシステムを構築するだけではありません。スケールするインテリジェンスを設計し、時間を節約する自動化フレームワークを構築し、ユーザーが実際に楽しめるインターフェースを作成します。デジタルノイズの世界で、イノベーションは私たちの通貨です。"
+  },
+  "marquee": {
+    "items": {
+      "nextjs": "Next.js",
+      "react": "React",
+      "nodejs": "Node.js",
+      "python": "Python",
+      "typescript": "TypeScript",
+      "postgresql": "PostgreSQL",
+      "docker": "Docker"
+    }
+  },
+  "capabilities": {
+    "title": "システム機能",
+    "subtitle": "インフラストラクチャグレードのソリューション。",
+    "items": {
+      "multiAgent": {
+        "title": "マルチエージェントアーキテクチャ",
+        "description": "当社のA2A（エージェント間）通信フレームワークにより、専門化されたAIエージェントが協力し、単一モデルシステムよりも高速に複雑なビジネス問題を解決できます。"
+      },
+      "security": {
+        "title": "エンタープライズセキュリティ",
+        "description": "<span class=\"text-emerald-400\">プライベートRAG</span>により実装され、データがセキュアなインフラを離れることなく学習できることを保証します。"
+      },
+      "crossPlatform": {
+        "title": "クロスプラットフォーム"
+      },
+      "globalEdge": {
+        "title": "グローバルエッジ"
+      }
+    }
+  },
+  "process": {
+    "phases": {
+      "discovery": {
+        "phase": "フェーズ_01",
+        "title": "発見",
+        "description": "ビジネスロジックへの深い探求。目標、ターゲットオーディエンスの理解、技術的制約の定義。"
+      },
+      "architecture": {
+        "phase": "フェーズ_02",
+        "title": "アーキテクチャ",
+        "description": "システムの青写真。スケーラブルなスキーマ、APIコントラクトの設計、適切なスタックの選択。"
+      },
+      "development": {
+        "phase": "フェーズ_03",
+        "title": "開発",
+        "description": "厳格なコーディングスプリント。継続的インテグレーション、自動テスト、ピクセルパーフェクトな実装。"
+      }
+    },
+    "cta": {
+      "title": "準備完了？",
+      "button": "プロジェクト開始"
+    }
+  },
+  "work": {
+    "title": "厳選された成果",
+    "items": {
+      "oyuAi": "Oyu AI",
+      "oyuAiTags": ["AIエージェント", "SAAS", "B2B"],
+      "astroAi": "Astro AI",
+      "astroAiTags": ["モバイル", "LLM", "チャットボット"],
+      "lookLuxeAi": "LookLuxe AI",
+      "lookLuxeAiTags": ["ビジョン", "スタイル", "モバイル"]
+    }
+  },
+  "terminal": {
+    "header": "oyu-intelligence — -zsh",
+    "command": "./initialize_intelligence.sh --production",
+    "loadingSwarm": "エージェントスウォームを読み込み中...",
+    "loading": "読み込み中",
+    "neuralCore": "ニューラルコア v2.4",
+    "multiAgentGrid": "マルチエージェントグリッド",
+    "knowledgeBase": "ナレッジベース",
+    "connectingRAG": "プライベートRAGクラスターに接続中...",
+    "connected": "接続完了",
+    "optimizingNeural": "ニューラルパスウェイを最適化中...",
+    "done": "完了 (0.42秒)",
+    "systemReady": "システムはデプロイ準備完了です。"
+  },
+  "references": {
+    "title": "リファレンス",
+    "subtitle": "[ 信頼されて ]",
+    "items": {
+      "wangOk": "Wang OK",
+      "wangOkRole": "シンガー, 88rising",
+      "wangOkQuote": "「期待を超えました。」",
+      "ahmetYurdakul": "Ahmet YURDAKUL",
+      "ahmetYurdakulRole": "データサイエンティスト, HubX",
+      "ahmetYurdakulQuote": "「ゲームチェンジャー。」",
+      "davidWilson": "David Wilson",
+      "davidWilsonRole": "創設者, StartUp Ventures",
+      "davidWilsonQuote": "「真のテクノロジーパートナー。」"
+    }
+  },
+  "zoomMask": {
+    "title": "構築しましょう"
+  },
+  "footer": {
+    "companyName": "OYU INTELLIGENCE",
+    "copyright": "© 2024 OYU INTELLIGENCE LLC",
+    "systemStatus": "システム稼働中",
+    "twitter": "ツイッター",
+    "linkedin": "リンクトイン",
+    "instagram": "インスタグラム"
+  },
+  "common": {
+    "email": "oyu.intelligence@icloud.com"
+  },
+  "languageSelector": {
+    "title": "言語を選択",
+    "subtitle": "ご希望の言語を選択してください"
+  }
+}

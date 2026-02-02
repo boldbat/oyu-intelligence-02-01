@@ -2,8 +2,11 @@
 
 import { useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function ServicesSection() {
+    const { t } = useLanguage();
+
     useEffect(() => {
         const gridCells = document.querySelectorAll('.grid-cell');
         gridCells.forEach(cell => {
@@ -20,7 +23,7 @@ export default function ServicesSection() {
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between mb-20 items-end">
                     <h2 className="text-4xl md:text-5xl font-medium heading-font tracking-tight text-white glow-text">
-                        Core Modules
+                        {t('services.title')}
                     </h2>
                     <div className="flex items-center gap-4">
                         <div className="h-px w-12 bg-neutral-800"></div>
@@ -50,9 +53,9 @@ export default function ServicesSection() {
                             </div>
                             <span className="text-xs mono-font text-neutral-600 group-hover:text-indigo-400">01</span>
                         </div>
-                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">AI Automation</h3>
+                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">{t('services.items.automation.title')}</h3>
                         <p className="text-sm text-neutral-500 leading-relaxed max-w-xs group-hover:text-neutral-400">
-                            Automating repetitive tasks, analyzing data, and making intelligent decisions with AI models.
+                            {t('services.items.automation.description')}
                         </p>
                     </div>
 
@@ -70,9 +73,9 @@ export default function ServicesSection() {
                             </div>
                             <span className="text-xs mono-font text-neutral-600 group-hover:text-cyan-400">02</span>
                         </div>
-                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">Mobile Apps</h3>
+                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">{t('services.items.mobile.title')}</h3>
                         <p className="text-sm text-neutral-500 leading-relaxed max-w-xs group-hover:text-neutral-400">
-                            Developing beautiful, high-performance iOS and Android applications with Flutter & React Native.
+                            {t('services.items.mobile.description')}
                         </p>
                     </div>
 
@@ -91,9 +94,9 @@ export default function ServicesSection() {
                             </div>
                             <span className="text-xs mono-font text-neutral-600 group-hover:text-emerald-400">03</span>
                         </div>
-                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">Web Design</h3>
+                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">{t('services.items.web.title')}</h3>
                         <p className="text-sm text-neutral-500 leading-relaxed max-w-xs group-hover:text-neutral-400">
-                            Modern, responsive websites that perfectly represent your brand identity.
+                            {t('services.items.web.description')}
                         </p>
                     </div>
 
@@ -110,9 +113,9 @@ export default function ServicesSection() {
                             </div>
                             <span className="text-xs mono-font text-neutral-600 group-hover:text-rose-400">04</span>
                         </div>
-                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">AI Content &amp; Automation</h3>
+                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">{t('services.items.content.title')}</h3>
                         <p className="text-sm text-neutral-500 leading-relaxed max-w-xs group-hover:text-neutral-400">
-                            Generative AI for video, image, &amp; game assets. Intelligent chatbots &amp; n8n workflow automation.
+                            {t('services.items.content.description')}
                         </p>
                     </div>
 
@@ -130,9 +133,9 @@ export default function ServicesSection() {
                             </div>
                             <span className="text-xs mono-font text-neutral-600 group-hover:text-purple-400">05</span>
                         </div>
-                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">SaaS Products</h3>
+                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">{t('services.items.saas.title')}</h3>
                         <p className="text-sm text-neutral-500 leading-relaxed max-w-xs group-hover:text-neutral-400">
-                            Developing B2B/B2C platforms like Oyu AI, Astro AI, and LookLuxe AI.
+                            {t('services.items.saas.description')}
                         </p>
                     </div>
 
@@ -150,9 +153,9 @@ export default function ServicesSection() {
                             </div>
                             <span className="text-xs mono-font text-neutral-600 group-hover:text-orange-400">06</span>
                         </div>
-                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">Data Intelligence</h3>
+                        <h3 className="text-2xl font-medium text-white mb-4 heading-font group-hover:translate-x-2 transition-transform duration-300">{t('services.items.data.title')}</h3>
                         <p className="text-sm text-neutral-500 leading-relaxed max-w-xs group-hover:text-neutral-400">
-                            Helping businesses understand data patterns and trends with AI algorithms.
+                            {t('services.items.data.description')}
                         </p>
                     </div>
             </div>
