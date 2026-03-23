@@ -1,11 +1,27 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono, Noto_Sans_JP, Poppins, Source_Serif_4 } from "next/font/google";
 import "../globals.css";
 import { LanguageProvider, Locale } from "@/contexts/LanguageContext";
+import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+const sourceSerif4 = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-source-serif-4",
   display: "swap",
 });
 
@@ -50,6 +66,12 @@ export async function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'mn' }, { locale: 'ja' }];
 }
 
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  variable: "--font-noto-sans-jp",
+  display: "swap",
+});
+
 export default async function LocaleLayout({
   children,
   params,
@@ -63,10 +85,11 @@ export default async function LocaleLayout({
   return (
     <html lang={validLocale} className="antialiased">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
-        style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${notoSansJP.variable} ${poppins.variable} ${sourceSerif4.variable}`}
+        style={{ fontFamily: 'var(--font-inter), var(--font-noto-sans-jp), Inter, sans-serif' }}
       >
         <LanguageProvider initialLocale={validLocale}>
+          <CustomCursor />
           {children}
         </LanguageProvider>
       </body>

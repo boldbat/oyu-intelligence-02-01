@@ -1,0 +1,12 @@
+{
+  "discovered": {
+    "legacyLocalEntries": 15,
+    "deployedSitemapBlogEntries": 15
+  },
+  "migrated": {
+    "localeEntries": 45,
+    "uniqueSlugs": 15
+  },
+  "skipped": [],
+  "missingAssets": []
+}

@@ -24,7 +24,8 @@ export default function ManifestoSection() {
       
       text.split(" ").forEach(word => {
         const span = document.createElement("span");
-        span.innerText = word + " ";
+        span.textContent = word;
+        span.style.marginRight = "0.25em"; // Add explicit spacing
         span.style.opacity = "0.2";
         span.style.filter = "blur(8px)";
         span.style.display = "inline-block";

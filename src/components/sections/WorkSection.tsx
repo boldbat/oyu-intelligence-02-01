@@ -1,28 +1,32 @@
 'use client';
 
+import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function WorkSection() {
-  const { t, tArray } = useLanguage();
+  const { t, tArray, locale } = useLanguage();
 
   const works = [
     {
       titleKey: 'oyuAi',
-      image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2940&auto=format&fit=crop',
+      slug: 'oyu-ai-platform',
+      image: 'https://images.unsplash.com/photo-1675271591211-126ad94e495d?q=80&w=2940&auto=format&fit=crop', // Futuristic AI Brain/Network
       tagsKey: 'oyuAiTags',
       color: 'indigo',
       top: '24',
     },
     {
       titleKey: 'astroAi',
-      image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg',
+      slug: 'astro-ai-analytics',
+      image: 'https://images.unsplash.com/photo-1639322537228-ad7117a394ec?q=80&w=2940&auto=format&fit=crop', // Deep Space/Astronomy Data
       tagsKey: 'astroAiTags',
       color: 'purple',
       top: '32',
     },
     {
       titleKey: 'lookLuxeAi',
-      image: 'https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2940&auto=format&fit=crop',
+      slug: 'lookluxe-ai-fashion',
+      image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2940&auto=format&fit=crop', // Fashion/Luxury aesthetics
       tagsKey: 'lookLuxeAiTags',
       color: 'rose',
       top: '40',
@@ -41,9 +45,10 @@ export default function WorkSection() {
         {works.map((work, index) => {
           const tags = tArray(`work.items.${work.tagsKey}`);
           return (
-            <div 
+            <Link
               key={index} 
-              className="sticky work-card group hover-trigger cursor-none"
+              href={`/${locale}/projects/${work.slug}`}
+              className="sticky block work-card group hover-trigger"
               style={{ 
                 top: `${6 + index * 3}rem`,
                 zIndex: index + 1
@@ -72,7 +77,7 @@ export default function WorkSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

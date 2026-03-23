@@ -2,9 +2,11 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { usePathname } from 'next/navigation';
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -36,8 +38,9 @@ export default function CustomCursor() {
         el.removeEventListener('mouseenter', handleMouseEnter);
         el.removeEventListener('mouseleave', handleMouseLeave);
       });
+      document.body.classList.remove('hovering');
     };
-  }, []);
+  }, [pathname]);
 
   return <div ref={cursorRef} className="cursor-dot" />;
 }

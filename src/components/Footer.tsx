@@ -4,12 +4,12 @@ import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <footer id="contact" className="py-20 px-6 border-t border-white/10 text-center bg-[#030303] relative z-20">
       <Link 
-        href="mailto:oyu.intelligence@icloud.com" 
+        href={`/${locale}`} 
         className="block text-[13vw] font-bold leading-none text-[#111] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-b hover:from-white hover:to-neutral-500 transition-all duration-700 cursor-pointer hover-trigger heading-font tracking-tight"
       >
         OYU INTELLIGENCE
@@ -21,6 +21,8 @@ export default function Footer() {
           <span className="text-green-500">{t('footer.systemStatus')}</span>
         </div>
         <div className="flex gap-8 justify-center md:justify-end">
+          <Link href={`/${locale}/projects`} className="hover:text-white transition-colors hover-trigger">{t('navigation.work')}</Link>
+          <Link href={`/${locale}/blog`} className="hover:text-white transition-colors hover-trigger">{t('navigation.blog')}</Link>
           <Link href="#" className="hover:text-white transition-colors hover-trigger">{t('footer.twitter')}</Link>
           <Link href="#" className="hover:text-white transition-colors hover-trigger">{t('footer.linkedin')}</Link>
           <Link href="#" className="hover:text-white transition-colors hover-trigger">{t('footer.instagram')}</Link>
@@ -29,3 +31,4 @@ export default function Footer() {
     </footer>
   );
 }
+

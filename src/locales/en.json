@@ -2,7 +2,8 @@
   "navigation": {
     "services": "Services",
     "solutions": "Solutions",
-    "work": "Work",
+    "work": "Projects",
+    "blog": "Blog",
     "process": "Process",
     "systemVersion": "System v1.0"
   },
@@ -59,6 +60,11 @@
   },
   "manifesto": {
     "text": "We don't just build systems. We architect intelligence that scales, automate frameworks that save time, and build interfaces that users actually enjoy. In a world of digital noise, innovation is our currency."
+  },
+  "news": {
+    "badge": "LATEST INSIGHTS",
+    "title": "Intelligence In Motion",
+    "viewAll": "View All Articles"
   },
   "marquee": {
     "items": {
